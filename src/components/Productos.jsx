@@ -1,30 +1,28 @@
-import { getFirestore,collection,getDocs,query,where} from "firebase/firestore"
-import { useEffect} from "react"
+import {getFirestore,collection,getDocs,} from "firebase/firestore";
+import { useEffect, useState } from "react";
+import Producto from "./Producto";
+
+
 function Productos() {
-  
 
-  useEffect(()=>{
-    const db = getFirestore()
-    const itemCollection = collection(db,"items")
-    
-    const itemsShort= query(itemCollection,where("categoria","==","shorts"))
+  const [items, setItems] = useState([]);
 
-    getDocs(itemsShort).then(snapshot=>{
-      if (snapshot.size===0){
-        console.log("No hay resultado para la busqueda")
-      }else{
-        snapshot.docs.map(docu=>console.log(docu.data()))
-      }
-    })
-  },[])
+  useEffect(() => {
+    const db = getFirestore();
+    const itemCollection = collection(db, "items");
 
-  
+    getDocs(itemCollection).then((snapshot) => {
+      const products = snapshot.docs.map((doc) => ({id: doc.id,...doc.data()}));
+      setItems(products);  
+    });
+
+  }, []);
+
   return (
     <>
-
-      <h1>productos</h1>
+        <Producto items={items}/>
     </>
-  )
+  );
 }
 
-export default Productos
+export default Productos;
