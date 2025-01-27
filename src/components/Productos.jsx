@@ -1,24 +1,15 @@
-import {getFirestore,collection,getDocs,} from "firebase/firestore";
-import { useEffect, useState } from "react";
+
+import {  useState } from "react";
 import CardProducto from "./CardProducto";
+import { useContext } from "react"
+import { dataContext } from "./context"
 
 
 
 
 function Productos() {
 
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    const db = getFirestore();
-    const itemCollection = collection(db, "items");
-
-    getDocs(itemCollection).then((snapshot) => {
-      const products = snapshot.docs.map((doc) => ({id: doc.id,...doc.data()}));
-      setItems(products);  
-    });
-
-  }, []);
+  const {data} = useContext(dataContext);
 
   const categoria = {
     camisetas: "camisetas",
@@ -28,8 +19,8 @@ function Productos() {
   const [selecCategoria, setSelecCategoria] = useState("");
 
   const filtroCategoria = selecCategoria
-    ? items.filter((produ) => produ.categoria === selecCategoria)
-    : items;
+    ? data.filter((produ) => produ.categoria === selecCategoria)
+    : data;
 
   return (
     <>

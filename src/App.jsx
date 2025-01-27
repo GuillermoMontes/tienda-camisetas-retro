@@ -8,6 +8,7 @@ import Error from "./components/Error";
 import Productos from "./components/Productos";
 import Carrito from "./components/Carrito";
 import DetallesProducto from "./components/DetallesProducto";
+import DataProvider from "./components/context";
 
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
 
   return (
     <>
+      
+    <DataProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout/>}>
@@ -27,6 +30,10 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+    </DataProvider>
+
+   
+      
       
     
 

@@ -18,7 +18,7 @@ function Layout() {
             <Link to={"quienesSomos"}>Quienes Somos</Link>
           </li>
           <li>
-            <Link to={"carrito"}>Carrito</Link>
+            <Link to={"carrito"}>🛒</Link>
           </li>
         </ul>
       </nav>
