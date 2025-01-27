@@ -18,9 +18,22 @@ const DataProvider = ({ children })=>{
     
       }, []);
 
-      const  [animal, setAnimal] = useState("gato")
+      const  [cart, setCart] = useState([])
 
-      return (<dataContext.Provider value={{data}}>{children}</dataContext.Provider>);
+      const agregarProducto = (prod)=>{
+        const prodRepetido = cart.find((item) => item.id === prod.id)
+
+        if (prodRepetido){
+          setCart(cart.map((item) => (item.id === prod.id ? {...prod, quantity: prodRepetido.quantity + 1 } : item )))
+        }else{
+          setCart([...cart,prod])
+        }
+        
+      }
+
+      
+
+      return (<dataContext.Provider value={{data,cart,setCart,agregarProducto}}>{children}</dataContext.Provider>);
 
     
 }
