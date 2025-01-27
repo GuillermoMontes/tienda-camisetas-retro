@@ -2,7 +2,7 @@
 function Error() {
   return (
     <>
-    <P>a DONDE VAS?</P>
+    <h1>Pagina no encontrada</h1>
     </>
   )
 }

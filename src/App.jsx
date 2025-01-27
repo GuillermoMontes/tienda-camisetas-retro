@@ -20,10 +20,10 @@ function App() {
           <Route path="/" element={<Layout/>}>
             <Route index element={<Inicio/>}/>
             <Route path="productos" element={<Productos/>}/>
-           {/* <Route path="productos/:id" element={<DetallesProducto/>}/>*/}
+            <Route path="productos/:id" element={<DetallesProducto/>}/>
             <Route path="quienesSomos" element={<Nosotros/>}/>
             <Route path="carrito" element={<Carrito/>}/>
-            <Route path="*" element={<Error/>} />
+            <Route path="*" element={<Error/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
