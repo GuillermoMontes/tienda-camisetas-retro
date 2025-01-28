@@ -1,8 +1,13 @@
+import messiInicio from "../assets/img/messiInicio.jpg"
 
 function Inicio() {
   return (
+
     <>
-      <h1>Bienevenidos</h1>
+      <div className="flex justify-center m-12 ">
+       <img src={messiInicio} />
+      </div>
+      <footer className="text-white text-center">Copyright InduRetro - 2025. Todos los derechos reservados®.</footer> 
     </>
   )
 }

@@ -1,16 +1,21 @@
 
 function Nosotros() {
   return (
-    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto minima vel at quasi optio necessitatibus consectetur. Illum nobis quam tempore modi molestias, quaerat doloremque consectetur delectus, blanditiis, praesentium quia fugit?
-    Ad saepe, nam cum reprehenderit eos, eveniet commodi provident obcaecati dolorum repudiandae inventore laboriosam iure ratione doloremque molestiae modi eaque iusto, id autem quaerat at? Aspernatur tempore molestias rerum odit?
-    Eveniet aperiam minima, atque autem accusantium voluptate libero iste vitae quod labore ex esse soluta aspernatur eligendi nobis consequuntur, asperiores numquam id laboriosam illo culpa neque! Aliquid dolore optio dolorem?
-    Quos facere ipsam nostrum consectetur ad commodi voluptatum, dolores itaque hic nesciunt quis voluptatem! Exercitationem sint assumenda est modi beatae omnis possimus fugit vitae accusantium alias eum, excepturi doloremque quidem.
-    Architecto reiciendis ipsa illum iusto eius non ducimus voluptatem. Tempore porro iure unde a. Necessitatibus, aut! Cupiditate error alias deleniti sapiente, quasi aliquam eveniet, illo amet eos obcaecati consequatur ipsa.
-    Enim sunt minus corrupti non, nam quaerat dignissimos voluptatum iste porro optio! Velit qui inventore voluptate, exercitationem culpa dolorem architecto laborum corporis labore assumenda ab consectetur unde doloremque tempora soluta.
-    Laborum accusamus velit eveniet? Vero reprehenderit sequi, hic laborum sapiente sed ipsam nobis, tempore magni blanditiis enim. Sit necessitatibus quia impedit odio accusantium dolore, perspiciatis deleniti fugit cum maiores eligendi?
-    Atque, aliquam quae voluptatum magnam, eum numquam impedit consequuntur natus similique possimus nemo tempore debitis iusto blanditiis quia id necessitatibus saepe quis sequi facere omnis esse nobis ipsam. Placeat, eius.
-    Maiores cumque laudantium odio nostrum libero explicabo laborum suscipit rerum a distinctio vel iste enim mollitia dolorum deserunt obcaecati, deleniti eum voluptatibus nam praesentium reiciendis, at quis! Dolor, porro ipsam!
-    Modi, esse, omnis cupiditate amet non deleniti at asperiores quidem rem, adipisci consectetur. Eaque omnis delectus voluptates, officia architecto quibusdam corrupti ad sint maxime adipisci veritatis vitae eos ullam consequatur.</div>
+    <div className="bg-amber-50 flex  mx-20 p-6 my-6">
+      <p className="font-bold text-xl text-slate-700 ">InduRetro nace como necesidad de compartir la pasión por el fútbol y la historia. Rememorar momentos únicos que nos dió el deporte.¿Quien de chico no soñó con jugar un rato en el verde césped vistiendo los colores de su amado club?. ¿Quien no voló en una atajada épica gritando el nombre de su arquero favorito?
+
+
+Siempre me gustaron las camisetas de antaño pero era un imposible conseguirlas, sea por una cuestión económica o porque ya no existian entonces surgió la pregunta ¿por que no reeditarlas y hacer que todo aquel que comparte esta pasión pueda acceder a ellas?.
+
+
+De a poco me fui involucrando en el mundillo del rubro textil, aprendiendo de materiales y procesos de producción. Luego vino animarse a la comercialización, ofrecerlo al público. Arranqué por el circulo íntimo y la aceptación fue rotunda, de ahi a las plataformas de venta online que de a poco me acercaron al hincha que curioseando o compartiendo la misma intriga que tuve yo, hurgaba en miles de páginas al mejor estilo busqueda del tesoro.
+
+
+Con el paso del tiempo lo que comenzó como un pasatiempo se volvió un estilo de vida, hice amigos y conoci jugadores que nunca me hubiese imaginado ver como es el caso de Lothar Matthaus (tengo una camiseta de Alemania firmada por el).
+
+
+Pasen y vean, es un gusto recibirlos! Los saluda Guille.-</p>
+    </div>
   )
 }
 

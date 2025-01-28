@@ -24,9 +24,7 @@ function Productos() {
 
   return (
     <>
-         <div className="flex justify-center m-4 ">
-
-           
+         <div className="flex justify-center bg-sky-500/25 text-white font-semibold shadow">
             <button className="mx-4 cursor-pointer" onClick={()=>setSelecCategoria()}>Todos los productos</button>
             <button className="mx-4 cursor-pointer" onClick={()=>setSelecCategoria(categoria.camisetas)}>Camisetas</button>
             <button className="mx-4 cursor-pointer" onClick={()=>setSelecCategoria(categoria.shorts)}>Shorts</button>

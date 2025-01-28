@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       
-    <DataProvider>
+      <DataProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout/>}>
@@ -31,6 +31,8 @@ function App() {
         </Routes>
       </BrowserRouter>
     </DataProvider>
+
+      
 
    
       

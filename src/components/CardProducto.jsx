@@ -7,13 +7,19 @@ function CardProducto({filtroCategoria}) {
 
 
   return (
-    <div className="flex-colum">
+    <div className="flex flex-wrap justify-items-center items-center">
     {filtroCategoria.map((prod)=>(
-      <div className="bg-red-300 m-2" key={prod.id}>
-        <h1>{prod.nombre}</h1>
-        <h2>{prod.descripcion}</h2>
-        <Link to={`${prod.id}`}>Ver Detalles</Link>
-        <button onClick={()=>agregarProducto(prod)}>Agregar</button>
+      <div className="bg-sky-500 m-2 max-w-70 shadow-2xl rounded-2xl font-semibold" key={prod.id}>
+        <img className="size-70" src={prod.imgf} alt="imgfrente" />
+        <h1 className="mx-4 my-1 text-slate-700">{prod.nombre}</h1>
+        <h1 className="mx-4 my-1 text-center text-slate-700">Precio: ${prod.precio}</h1>
+        
+
+        <div className="flex justify-around my-2">
+          <div className="bg-sky-600 text-white rounded p-1 shadow "><Link to={`${prod.id}`}>Ver Detalles</Link></div>
+          <button className="bg-sky-600 text-white rounded p-1 shadow cursor-pointer " onClick={()=>agregarProducto(prod)}>Agregar</button>
+        </div>
+
       </div>
     ))}
   </div>

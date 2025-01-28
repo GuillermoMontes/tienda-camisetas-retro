@@ -17,7 +17,9 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 
 createRoot(document.getElementById('root')).render(
-  <>
+  
+  <div className="bg-linear-to-r from-cyan-500 to-blue-500 h-screen">
     <App />
-  </>,
+  </div>,
+  
 )
