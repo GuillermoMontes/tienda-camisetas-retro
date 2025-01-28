@@ -17,10 +17,6 @@ function Carrito() {
         <>
           <CarritoElemento/>
           <CarritoTotal/>
-
-          <form action="">
-        
-          </form>
         </>
       ) : (
         <div className="bg-amber-50 h-16 my-4 w-300 flex justify-center">

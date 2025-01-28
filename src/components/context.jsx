@@ -23,10 +23,11 @@ const DataProvider = ({ children })=>{
       const  [cart, setCart] = useState([])
 
       const agregarProducto = (prod)=>{
+        
         const prodRepetido = cart.find((item) => item.id === prod.id)
-
+        
         if (prodRepetido){
-          setCart(cart.map((item) => (item.id === prod.id ? {...prod, quantity: prodRepetido.quantity + 1 } : item )))
+          setCart(cart.map((item) => (item.id === prod.id ? {...prod,  quantity: prodRepetido.quantity + 1 } : item )))
           setContProductos(contProductos + 1)
         }else{
           
