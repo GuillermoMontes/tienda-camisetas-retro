@@ -13,6 +13,7 @@ function CardProducto({filtroCategoria}) {
         <img className="size-70" src={prod.imgf} alt="imgfrente" />
         <h1 className="mx-4 my-1 text-slate-700">{prod.nombre}</h1>
         <h1 className="mx-4 my-1 text-center text-slate-700">Precio: ${prod.precio}</h1>
+        <h3 className="text-center text-slate-700">Stock: {prod.stock}</h3> 
         
 
         <div className="flex justify-around my-2">

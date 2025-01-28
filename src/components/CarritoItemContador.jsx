@@ -3,14 +3,16 @@ import { dataContext } from "./context"
 
 function CarritoItemContador({prod}) {
 
-    const {cart,setCart,agregarProducto} = useContext(dataContext);
+    const {cart,setCart,agregarProducto,setContProductos,contProductos} = useContext(dataContext);
 
     const decrementar = ()=>{
         const prodRepetido = cart.find((item) => item.id === prod.id)
 
         prodRepetido.quantity !== 1 &&
         setCart(cart.map((item) => (item.id === prod.id ? {...prod, quantity: prodRepetido.quantity - 1 } : item )))
-
+        if (prodRepetido.quantity>1){
+          setContProductos(contProductos - 1)
+        }
     }
 
   return (

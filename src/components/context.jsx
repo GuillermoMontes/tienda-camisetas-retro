@@ -6,6 +6,8 @@ export const dataContext = createContext();
 const DataProvider = ({ children })=>{
 
     const [data, setData] = useState([]);
+
+    const [contProductos, setContProductos] = useState(0)
     
       useEffect(() => {
         const db = getFirestore();
@@ -25,15 +27,19 @@ const DataProvider = ({ children })=>{
 
         if (prodRepetido){
           setCart(cart.map((item) => (item.id === prod.id ? {...prod, quantity: prodRepetido.quantity + 1 } : item )))
+          setContProductos(contProductos + 1)
         }else{
+          
           setCart([...cart,prod])
+          setContProductos(contProductos + 1)
+
         }
         
       }
 
       
 
-      return (<dataContext.Provider value={{data,cart,setCart,agregarProducto}}>{children}</dataContext.Provider>);
+      return (<dataContext.Provider value={{data,cart,setCart,agregarProducto,contProductos,setContProductos}}>{children}</dataContext.Provider>);
 
     
 }

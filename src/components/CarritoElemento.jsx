@@ -4,7 +4,7 @@ import CarritoItemContador from "./CarritoItemContador";
 
 
 function CarritoElemento() {
-    const {cart,setCart} = useContext(dataContext);
+    const {cart,setCart,setContProductos,contProductos} = useContext(dataContext);
 
     const eliminarProducto = (id)=>{
         const buscarId = cart.find((el) => el.id === id)
@@ -14,6 +14,8 @@ function CarritoElemento() {
         })
 
         setCart(carritoNuevo)
+        setContProductos(contProductos-1)
+
     }
 
     return cart.map((prod)=>{
@@ -22,6 +24,7 @@ function CarritoElemento() {
                 <img className="w-20" src={prod.imgf} alt="imagen frente" />
                 <h3>{prod.nombre}</h3>
                 <CarritoItemContador prod ={prod}/>
+                <h3>Stock: {prod.stock}</h3>
                 <h3>${prod.precio * prod.quantity}</h3>
                 <div className="cursor-pointer shadow bg-blue-200 mx-2" onClick={()=>eliminarProducto(prod.id)}>❌</div>
             </div>

@@ -5,7 +5,7 @@ function Inicio() {
 
     <>
       <div className="flex justify-center m-12 ">
-       <img src={messiInicio} />
+       <img className="h-96" src={messiInicio} />
       </div>
       <footer className="text-white text-center">Copyright InduRetro - 2025. Todos los derechos reservados®.</footer> 
     </>
