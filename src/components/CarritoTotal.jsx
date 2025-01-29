@@ -51,20 +51,20 @@ const handleSubmit = (e)=>{
           Vaciar carrito
         </button>
       </div>
-      <form className="bg-blue-500 m-2 p-2 h-60 text-white shadow-2xl" onSubmit={handleSubmit}>
+      <form className="bg-blue-500 m-2 p-2  text-white shadow-2xl flex rounded-2xl" onSubmit={handleSubmit}>
         <fieldset>
           <label htmlFor="nombre">Nombre:</label>
-          <input className="bg-white m-1" type="text" id="nombre" onChange={handleUsuarioInput} />
+          <input className="bg-slate-400 p-1 m-1" type="text" id="nombre" onChange={handleUsuarioInput} />
         </fieldset>
         <fieldset>
           <label className="ml-5" htmlFor="mail">Email:</label>
-          <input className="bg-white m-1 " type="email" id="mail" onChange={handleMailInput} />
+          <input className="bg-slate-400 p-1 m-1 " type="email" id="mail" onChange={handleMailInput} />
         </fieldset>
         <fieldset>
           <label htmlFor="telefono">Telefono:</label>
-          <input className="bg-white m-1" type="text" id="telefono" onChange={handleTelefonoInput} />
+          <input className="bg-slate-400 p-1 m-1" type="text" id="telefono" onChange={handleTelefonoInput} />
         </fieldset>
-        <button className="bg-blue-600 p-1 rounded">Comprar</button>
+        <button className="bg-blue-600 hover:bg-blue-700 p-1 rounded cursor-pointer">Comprar</button>
       </form>
     </>
   );

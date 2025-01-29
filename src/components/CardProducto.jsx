@@ -17,8 +17,8 @@ function CardProducto({filtroCategoria}) {
         
 
         <div className="flex justify-around my-2">
-          <div className="bg-sky-600 text-white rounded p-1 shadow "><Link to={`${prod.id}`}>Ver Detalles</Link></div>
-          <button className="bg-sky-600 text-white rounded p-1 shadow cursor-pointer " onClick={()=>agregarProducto(prod)}>Agregar</button>
+          <div className="bg-sky-600 hover:bg-sky-700 text-white rounded p-1 shadow "><Link to={`${prod.id}`}>Ver Detalles</Link></div>
+          <button className="bg-sky-600 hover:bg-sky-700 text-white rounded p-1 shadow cursor-pointer " onClick={()=>agregarProducto(prod)}>Agregar</button>
         </div>
 
       </div>
