@@ -15,13 +15,13 @@ function Layout() {
           <li className="cursor-pointer mx-3 ">
             <Link to={"/"}>InduRetro⚽</Link>
           </li>
-          <li className="cursor-pointer">
+          <li className="cursor-pointer hover:text-zinc-600 transition ">
             <Link to={"/"}>Inicio</Link>
           </li>
-          <li className="cursor-pointer">
+          <li className="cursor-pointer hover:text-zinc-600 transition ">
             <Link to={"productos"}>Productos</Link>
           </li>
-          <li className="cursor-pointer">
+          <li className="cursor-pointer hover:text-zinc-600 transition ">
             <Link to={"quienesSomos"}>Quienes Somos</Link>
           </li>
           <li className="cursor-pointer mx-3 flex">

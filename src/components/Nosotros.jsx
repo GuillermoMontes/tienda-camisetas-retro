@@ -1,7 +1,7 @@
 
 function Nosotros() {
   return (
-    <div className="bg-amber-50 flex  mx-20 p-6 my-6">
+    <div className="bg-amber-50 flex  mx-20 p-6 my-6 h-screen">
       <p className="font-bold text-xl text-slate-700 ">InduRetro nace como necesidad de compartir la pasión por el fútbol y la historia. Rememorar momentos únicos que nos dió el deporte.¿Quien de chico no soñó con jugar un rato en el verde césped vistiendo los colores de su amado club?. ¿Quien no voló en una atajada épica gritando el nombre de su arquero favorito?
 
 
