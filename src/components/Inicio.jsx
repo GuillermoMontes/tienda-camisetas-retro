@@ -4,7 +4,7 @@ function Inicio() {
   return (
     <div className="h-screen">
       <div className="flex justify-center m-12">
-        <img className="h-96" src={messiInicio} />
+        <img className="md:h-96" src={messiInicio} />
       </div>
       <footer className="text-white text-center">
         Copyright InduRetro - 2025. Todos los derechos reservados®.
