@@ -7,7 +7,7 @@ function CardProducto({filtroCategoria}) {
 
 
   return (
-    <div className="flex flex-wrap justify-items-center items-center">
+    <div className="flex flex-wrap justify-items-center items-center justify-center">
     {filtroCategoria.map((prod)=>(
       <div className="bg-linear-to-t from-sky-500 to-indigo-500 m-2 max-w-70 shadow-2xl rounded-2xl font-semibold" key={prod.id}>
         <img className="size-70" src={prod.imgf} alt="imgfrente" />

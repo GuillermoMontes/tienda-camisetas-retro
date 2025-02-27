@@ -12,35 +12,34 @@ function CarritoTotal() {
 
   const total = cart.reduce((acc, el) => acc + el.precio * el.quantity, 0);
 
-  const [usuario,setUsuario] = useState({
+  const [usuario, setUsuario] = useState({
     nombre: "",
     mail: "",
-    telefono: ""
-})
+    telefono: "",
+  });
 
-const handleUsuarioInput = (e)=>{
-   setUsuario({...usuario, nombre: e.target.value() }) 
-}
+  const handleUsuarioInput = (e) => {
+    setUsuario({ ...usuario, nombre: e.target.value() });
+  };
 
-const handleMailInput = (e)=>{
-    setUsuario({...usuario, mail: e.target.value() }) 
- }
+  const handleMailInput = (e) => {
+    setUsuario({ ...usuario, mail: e.target.value() });
+  };
 
- const handleTelefonoInput = (e)=>{
-    setUsuario({...usuario, telefono: e.target.value() }) 
- } 
+  const handleTelefonoInput = (e) => {
+    setUsuario({ ...usuario, telefono: e.target.value() });
+  };
 
-const handleSubmit = (e)=>{
+  const handleSubmit = (e) => {
     e.preventDefault();
     setCart([]);
     setContProductos(0);
-    alert("Se realizó la compra con exito")
-
-}
+    alert("Se realizó la compra con exito");
+  };
 
   return (
     <>
-      <div className="bg-sky-100 text-slate-700 font-light font-semibold flex w-300 justify-center">
+      <div className="bg-sky-100 text-slate-700 font-semibold flex w-full justify-center">
         <h3>Total a pagar: ${total}</h3>
       </div>
       <div>
@@ -51,20 +50,50 @@ const handleSubmit = (e)=>{
           Vaciar carrito
         </button>
       </div>
-      <form className="bg-blue-500 m-2 p-2  text-white shadow-2xl flex rounded-2xl" onSubmit={handleSubmit}>
-        <fieldset>
-          <label htmlFor="nombre">Nombre:</label>
-          <input className="bg-slate-400 p-1 m-1" type="text" id="nombre" onChange={handleUsuarioInput} />
-        </fieldset>
-        <fieldset>
-          <label className="ml-5" htmlFor="mail">Email:</label>
-          <input className="bg-slate-400 p-1 m-1 " type="email" id="mail" onChange={handleMailInput} />
-        </fieldset>
-        <fieldset>
-          <label htmlFor="telefono">Telefono:</label>
-          <input className="bg-slate-400 p-1 m-1" type="text" id="telefono" onChange={handleTelefonoInput} />
-        </fieldset>
-        <button className="bg-blue-600 hover:bg-blue-700 p-1 rounded cursor-pointer">Comprar</button>
+      <form
+        className="bg-sky-500 m-2 p-2  text-slate-700 font-semibold shadow-2xl justify-between rounded-2xl w-full"
+        onSubmit={handleSubmit}
+      >
+        <div className="md:flex md:justify-between">
+          <fieldset>
+            <label htmlFor="nombre">Nombre:</label>
+            <input
+              className="bg-sky-200 p-1 m-1"
+              type="text"
+              id="nombre"
+              onChange={handleUsuarioInput}
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <label className="ml-5" htmlFor="mail">
+              Email:
+            </label>
+            <input
+              className="bg-sky-200 p-1 m-1 "
+              type="email"
+              id="mail"
+              onChange={handleMailInput}
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <label htmlFor="telefono">Telefono:</label>
+            <input
+              className="bg-sky-200 p-1 m-1"
+              type="number"
+              id="telefono"
+              onChange={handleTelefonoInput}
+              required
+            />
+          </fieldset>
+          <div className="flex justify-center my-1">
+            <button className="bg-blue-600 hover:bg-blue-700 p-1 rounded cursor-pointer text-white">
+            Comprar
+            </button>
+        </div>
+        </div>
+
       </form>
     </>
   );

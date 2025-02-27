@@ -12,20 +12,24 @@ function DetallesProducto() {
   const producto = data.find(prod=>prod.id === (id))
 
   if (!producto){
-    return <div className="flex justify-center m-12 "><img className="h-96" src={messiNoProducto} /></div>
+    return <div className="flex justify-center m-12 h-screen
+    "><img className="h-96" src={messiNoProducto} /></div>
   }
 
   return (
-    <div className="text-white grid justify-items-center bg-sky-700 ">
-      <div className="flex">
-        <img className="w-md" src={producto.imgf} alt="frente" />
-        <img className="w-md" src={producto.imgd} alt="dorsal" />
+    <div className="text-white grid justify-items-center md:h-screen   ">
+
+      <div className="md:flex">
+        <img className="size-96 " src={producto.imgf} alt="frente" />
+        <img className="size-96 " src={producto.imgd} alt="dorsal" />
       </div>
       
+        <div className=" bg-sky-700 p-4 m-4">
         <h2 className="font-light text-lg">{producto.nombre}</h2>
         <h2 className="font-light text-lg">Precio: ${producto.precio}</h2>
         <h2 className="font-light text-lg">🔥{producto.descripcion}</h2>
         <h3>Stock: {producto.stock}</h3>
+        </div>
         
       
 

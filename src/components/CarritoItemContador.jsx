@@ -17,9 +17,9 @@ function CarritoItemContador({prod}) {
 
   return (
     <div className="flex ">
-        <div className="mx-20 cursor-pointer" onClick={decrementar}>-</div>
+        <div className="mx-auto cursor-pointer" onClick={decrementar}>-</div>
         <div>{prod.quantity}</div>
-        <div className="mx-20 cursor-pointer" onClick={()=>agregarProducto(prod)}>+</div>
+        <div className="mx-auto cursor-pointer" onClick={()=>agregarProducto(prod)}>+</div>
     </div>
   )
 }
