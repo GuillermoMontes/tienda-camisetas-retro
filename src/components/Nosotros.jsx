@@ -1,8 +1,21 @@
+import { motion } from "framer-motion";
+
 function Nosotros() {
   return (
     <div className="md:h-screen">
-      <div className="bg-amber-50 mx-20 p-6 my-6">
-        <p className="font-bold text-xl text-slate-700 ">
+      <motion.div
+        initial={{
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{ duration: 1.5, type: "spring" }}
+        className="bg-amber-50 mx-20 p-6 my-6"
+      >
+        <p className="font-bold  text-slate-700 lg:text-xl">
           InduRetro nace como necesidad de compartir la pasión por el fútbol y
           la historia. Rememorar momentos únicos que nos dió el deporte.¿Quien
           de chico no soñó con jugar un rato en el verde césped vistiendo los
@@ -24,7 +37,7 @@ function Nosotros() {
           de Alemania firmada por el). Pasen y vean, es un gusto recibirlos! Los
           saluda Guille.-
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 }

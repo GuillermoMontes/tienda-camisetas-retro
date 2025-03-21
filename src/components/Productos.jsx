@@ -1,15 +1,11 @@
-
-import {  useState } from "react";
+import { useState } from "react";
 import CardProducto from "./CardProducto";
-import { useContext } from "react"
-import { dataContext } from "./context"
-
-
-
+import { useContext } from "react";
+import { dataContext } from "./context";
+import { motion } from "framer-motion";
 
 function Productos() {
-
-  const {data} = useContext(dataContext);
+  const { data } = useContext(dataContext);
 
   const categoria = {
     camisetas: "camisetas",
@@ -24,15 +20,34 @@ function Productos() {
 
   return (
     <>
-         <div className="flex justify-center bg-sky-500/25 text-white font-semibold shadow">
-            <button className="mx-4 cursor-pointer hover:text-zinc-600 transition duration-300" onClick={()=>setSelecCategoria()}>Todos los productos</button>
-            <button className="mx-4 cursor-pointer hover:text-zinc-600 transition duration-300" onClick={()=>setSelecCategoria(categoria.camisetas)}>Camisetas</button>
-            <button className="mx-4 cursor-pointer hover:text-zinc-600 transition duration-300" onClick={()=>setSelecCategoria(categoria.shorts)}>Shorts</button>
-        </div>
-      
-      <CardProducto filtroCategoria={filtroCategoria}/>
+      <div className="flex justify-center bg-sky-500/25 text-white font-semibold shadow">
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="mx-4 cursor-pointer hover:text-zinc-600 transition duration-300"
+          onClick={() => setSelecCategoria()}
+        >
+          Todos los productos
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="mx-4 cursor-pointer hover:text-zinc-600 transition duration-300"
+          onClick={() => setSelecCategoria(categoria.camisetas)}
+        >
+          Camisetas
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="mx-4 cursor-pointer hover:text-zinc-600 transition duration-300"
+          onClick={() => setSelecCategoria(categoria.shorts)}
+        >
+          Shorts
+        </motion.button>
+      </div>
 
-        
+      <CardProducto filtroCategoria={filtroCategoria} />
     </>
   );
 }
