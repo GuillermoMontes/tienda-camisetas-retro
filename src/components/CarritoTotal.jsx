@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { dataContext } from "./context";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 function CarritoTotal() {
   const { cart, setCart, setContProductos } = useContext(dataContext);
@@ -43,15 +44,17 @@ function CarritoTotal() {
         <h3>Total a pagar: ${total}</h3>
       </div>
       <div>
-        <button
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
           className="cursor-pointer bg-sky-100 rounded p-1 font-semibold text-slate-700 shadow my-4"
           onClick={resetear}
         >
           Vaciar carrito
-        </button>
+        </motion.button>
       </div>
       <form
-        className="bg-sky-500 m-2 p-2  text-slate-700 font-semibold shadow-2xl justify-between rounded-2xl w-full"
+        className="bg-sky-500 m-2  p-2  text-slate-700 font-semibold shadow-2xl justify-between rounded-2xl w-full"
         onSubmit={handleSubmit}
       >
         <div className="md:flex md:justify-between">
@@ -66,7 +69,7 @@ function CarritoTotal() {
             />
           </fieldset>
           <fieldset>
-            <label className="ml-5" htmlFor="mail">
+            <label className="mx-3" htmlFor="mail">
               Email:
             </label>
             <input
@@ -88,12 +91,15 @@ function CarritoTotal() {
             />
           </fieldset>
           <div className="flex justify-center my-1">
-            <button className="bg-blue-600 hover:bg-blue-700 p-1 rounded cursor-pointer text-white">
-            Comprar
-            </button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="bg-blue-600 hover:bg-blue-700 p-1 rounded cursor-pointer text-white"
+            >
+              Comprar
+            </motion.button>
+          </div>
         </div>
-        </div>
-
       </form>
     </>
   );
